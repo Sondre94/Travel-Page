@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
 
 
 
@@ -84,6 +84,7 @@ nav {
 i {
     color: whitesmoke;
     margin-right: auto;
+    margin-left: 20px;
     font-size: 25px;
     
 }
@@ -112,5 +113,18 @@ p {
 #title {
     color: whitesmoke;
     font-size: 50px;
+    margin-left: 20px;
+    font-weight: 800;
+
     
+}
+
+.buy-now-btn {
+    background: whitesmoke;
+    font-size: 17px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 500;
+    font-style: normal;
 }
