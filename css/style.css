@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+
+
+/* Layout */
+
+body {
+    margin: 0 auto;
+    max-width: 800px;
+    background: rgb(207, 207, 207);
+
+}
+.container{
+    display:grid;
+    height: 100vh;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: 3.5fr 1.5fr 1.2fr;
+    grid-template-areas: 
+        "header header header header"
+        "content1 content1 content2 content3"
+        "footer footer footer footer";
+    grid-gap: 0.2rem;
+}
+
+  
+.header {
+    grid-area: header;
+    background-image: url('https://images.unsplash.com/photo-1560103104-4623c14a473b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+  
+#content1 {
+    background: #6fffd2;
+    grid-area: content1;
+}
+  
+#content2 {
+    background: #64ffda;
+    grid-area: content2;
+}
+  
+#content3 {
+    background: #73ffba;
+    grid-area: content3;
+}
+  
+footer {
+    background: #1de9b6;
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows:0.4fr 0.4fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "nav"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer"
+
+    }
+}
+
+/* content */
+
+nav {
+    display: flex;
+    padding: 10px;
+    background: linear-gradient( rgb(8, 8, 8), transparent);
+    justify-content: flex-end;
+    align-items: center;
+}
+
+i {
+    color: whitesmoke;
+    margin-right: auto;
+    font-size: 25px;
+    
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+li {
+    color: whitesmoke;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+/* typography */
+body{
+    font-family: 'montserrat';
+}
+
+p {
+    color: whitesmoke;
+}
+
+#title {
+    color: whitesmoke;
+    font-size: 50px;
+    
+}
