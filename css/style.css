@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
     background: rgb(207, 207, 207);
     letter-spacing:0.1em;
-    width: 900px;
+    max-width: 1200px;
 
 
 }
@@ -18,15 +18,14 @@ body {
     grid-template-rows:auto;
     grid-template-areas: 
         "header header header"
-        "intro intro intro "
+        "intro intro weather"
+        "article article article"
         "content1 content1 content1"
         "footer footer footer";
-    grid-gap:5vh;
-    
-    
-    
-
+    grid-gap: 12vh;
+    margin:  0px 15px ;
 }
+
 
   
 
@@ -49,13 +48,13 @@ body {
 }
 
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
     .container {
         grid-template-columns: 1fr;
-        grid-template-rows:0.4fr 0.4fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-rows:auto;
         grid-template-areas: 
-        "nav"
-        "main"
+        "header"
+        "intro"
         "content1"
         "footer"
 
@@ -119,6 +118,14 @@ h2 {
 
     
 }
+.gallery-title {
+    color:rgb(27, 27, 27)
+}
+
+.intro-hl {
+    color:#1d1d1d;
+    text-align: center;
+}
 
 #title {
     color: whitesmoke;
@@ -134,6 +141,8 @@ h2 {
     color: rgb(27, 27, 27);
     text-align: center;
     font-size: 18px;
+    grid-area: intro;
+    margin: auto;
 }
 
 /* btn */
@@ -151,6 +160,7 @@ h2 {
     font-weight: 500;
     font-style: normal;
     transition: .5s;
+    cursor: pointer;
 }
 
 /* gallery */
@@ -175,11 +185,11 @@ h2 {
     border-radius: 5px;
   }
 
-  img {
+  .image-gallery img {
     transition: transform 0.2s ease
   }
 
-  img:hover {
+  .image-gallery img:hover {
     -webkit-transform:scale(2);
     transform:scale(1.5);
 }
@@ -187,7 +197,6 @@ h2 {
 footer{
     background: #1d1d1d;
     grid-area: footer;
-    width: 100vh;
 }
 
 .kontaktinfo {
@@ -205,4 +214,70 @@ footer{
 .kontaktinfo li {
     margin-top: 10px;
     color:#9b9b9b
+}
+
+
+/* weather app */
+
+.weather-app {
+    width: 40vh;
+    height: 20vh;
+    border-radius: 30px;
+    background: #026891;
+    padding: 0px 50px 50px 50px;
+}
+
+.degree {
+    text-align: start;
+}
+
+h3,
+h2,
+h4 {
+    color: white;
+    font-family: 'montserrat';
+    font-weight: 500;
+
+}
+
+.weather,
+.wind,
+.humidity {
+    margin: 0;
+    line-height: 30px;
+}
+
+.icon {
+    width: 100px;
+    margin: 0;
+    float: right;
+}
+
+/* article section */
+
+.article-container {
+    height: 500px;
+    grid-area: article;
+    display: flex;
+    justify-content: space-between;
+}
+
+article {
+    height: 100%;
+    width: 25%;
+    padding: 15px;
+    border: 5px solid white;
+}
+
+.article-img {
+    width: 100%;
+    height: 55%;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    
+
+}
+
+.article-txt {
+    color:#1d1d1d;
 }
