@@ -8,14 +8,14 @@ body {
     margin: 0 auto;
     background: rgb(207, 207, 207);
     letter-spacing:0.1em;
-    max-width: 900px;
+    width: 900px;
 
 
 }
 .container{
     display:grid;
-    grid-template-columns:2fr;
-    grid-template-rows:1fr;
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
     grid-template-areas: 
         "header header header"
         "intro intro intro "
@@ -185,7 +185,6 @@ h2 {
 }
 
 footer{
-    height: 250px;
     background: #1d1d1d;
     grid-area: footer;
     width: 100vh;
