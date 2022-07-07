@@ -9,6 +9,7 @@ body {
     background: rgb(207, 207, 207);
     letter-spacing:0.1em;
     max-width: 1200px;
+    font-family: 'montserrat';
 
 
 }
@@ -18,11 +19,11 @@ body {
     grid-template-rows:auto;
     grid-template-areas: 
         "header header header"
-        "intro intro weather"
+        "intro weather weather"
         "article article article"
         "content1 content1 content1"
         "footer footer footer";
-    grid-gap: 12vh;
+    grid-gap: 8vh;
     margin:  0px 15px ;
 }
 
@@ -48,16 +49,40 @@ body {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .container {
         grid-template-columns: 1fr;
-        grid-template-rows:auto;
+        /* grid-template-rows:2fr; */
+        grid-auto-rows: minmax(300px, auto);
         grid-template-areas: 
         "header"
-        "intro"
+        "weather"
         "content1"
-        "footer"
+        "intro"
+        "article"
+        "article"
+        "article"
+        "article"
+        "article";
+    }
 
+    .navbar-links {
+        display:none;
+    }
+
+    .article-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 200px;
+    }
+
+    #article1,
+    #article2,
+    #article3
+     {
+        width: 70%;
+        margin-bottom: 25px;
     }
 }
 
@@ -125,6 +150,7 @@ h2 {
 .intro-hl {
     color:#1d1d1d;
     text-align: center;
+
 }
 
 #title {
@@ -141,7 +167,6 @@ h2 {
     color: rgb(27, 27, 27);
     text-align: center;
     font-size: 18px;
-    grid-area: intro;
     margin: auto;
 }
 
@@ -170,11 +195,11 @@ h2 {
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
+    grid-area: content1
   }
   
   .image-gallery > li {
     height: 200px;
-    cursor: pointer;
   }
   
   .image-gallery li img {
@@ -224,7 +249,8 @@ footer{
     height: 20vh;
     border-radius: 30px;
     background: #026891;
-    padding: 0px 50px 50px 50px;
+    padding: 10px 70px 90px 70px;
+    grid-area: weather;
 }
 
 .degree {
